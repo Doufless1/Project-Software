@@ -1,0 +1,65 @@
+# Visual Studio 2022 specific files
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+Backup*/
+_ReSharper*/
+
+# JetBrains Rider specific files
+.idea/
+.idea/*
+*.iml
+out/
+
+# Build directories
+bin/
+obj/
+
+# Common temporary files
+*.tmp
+*.log
+*.vspscc
+*.vssscc
+[Tt]humbs.db
+[Dd]esktop.ini
+*.DS_Store
+*.directory
+
+# C# Specific
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Windows image file caches
+*.wim
+
+# Rider-based caches
+.idea/*/workspace.xml
+.idea/*/tasks.xml
+.idea/dictionaries
+.idea/.gitignore
+
+# Rider File Watchers
+.idea/*/file-watcher.xml
+
+# Rider HTTP client
+.idea/httpRequests/
+
+# Exclude Rider-based markdown files (if used)
+.idea/md-templates/
+
+# User-specific preferences
+*.sln.dotSettings.user
+
+# MacOS specific
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Other
+*.bak
+*.swp
+*.bak.*
+
