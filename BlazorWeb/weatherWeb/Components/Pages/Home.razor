@@ -12,32 +12,37 @@
 
 </head>
 <body>
-   
-    <button class="btn enschede" style="display: block; margin-bottom: 10px;" @onclick="OnEnschedeClick" data-value="Enschede">Enschede</button>
-    <button class="btn enschede" style="display: block; margin-bottom: 10px;" @onclick="OnDeventerClick" data-value="Deventer">Deventer</button>
-    <button class="btn enschede" style="display: block; margin-bottom: 10px;" @onclick="OnAppeldornClick" data-value="Appeldorn">Appeldorn</button>
-    
-  <!-- First Row: Chart Type -->
-  <div class="container">
-    <div class="tabs" id="dataTabs">
-        <div class="tab type active" data-value="insideTemperature">Inside Temperature</div>
-        <div class="tab type" data-value="outsideTemperature">Outside Temperature</div>
-        <div class="tab type" data-value="humidity">Humidity</div>
-        <div class="tab type" data-value="luminocity">Luminocity</div>
-        <div class="tab type" data-value="airPressure">Air Pressure</div>
-    </div>
+   <div id="general-container">
+        <div id="cityButton-container">
+            <button class="btn enschede" style="display: block; margin-bottom: 10px;" @onclick="OnEnschedeClick" data-value="Enschede">Enschede</button>
+            <button class="btn enschede" style="display: block; margin-bottom: 10px;" @onclick="OnDeventerClick" data-value="Deventer">Deventer</button>
+            <button class="btn enschede" style="display: block; margin-bottom: 10px;" @onclick="OnAppeldornClick" data-value="Appeldorn">Appeldorn</button>
+        </div>
+        <div class="text-container">
+            <p>infaiwfuwahfluawhjfliuwahfdiluawh</p>
+            <p>dihefuhaesfaehudfahwuldfhaw</p>
+        </div>
+    <!-- First Row: Chart Type -->
+        <div class="container">
+            <div class="tabs" id="dataTabs">
+                <div class="tab type active" data-value="insideTemperature">Inside Temperature</div>
+                <div class="tab type" data-value="outsideTemperature">Outside Temperature</div>
+                <div class="tab type" data-value="humidity">Humidity</div>
+                <div class="tab type" data-value="luminocity">Luminocity</div>
+                <div class="tab type" data-value="airPressure">Air Pressure</div>
+            </div>
 
-    <!-- Second Row: Dataset Selection -->
-    <div class="tabs" id="timeTabs">
-        <div class="tab range active" data-value="day">Day</div>
-        <div class="tab range" data-value="week">Week</div>
-        <div class="tab range" data-value="month">Month</div>
-    </div>
+            <!-- Second Row: Dataset Selection -->
+            <div class="tabs" id="timeTabs">
+                <div class="tab range active" data-value="day">Day</div>
+                <div class="tab range" data-value="week">Week</div>
+                <div class="tab range" data-value="month">Month</div>
+            </div>
 
-    <!-- Chart Container -->
-    <canvas id="myChart"></canvas>
+            <!-- Chart Container -->
+            <canvas id="myChart"></canvas>
+        </div>
   </div>
-  
 </body>
 </html>
 @code {

@@ -84,16 +84,15 @@ const weatherData = {
 };
 const cityColors = { Enschede: 'red', Deventer: 'blue', Appeldorn: 'green' };
 let activeCities = { Enschede: true, Appeldorn: false, Deventer: false};
-let timeRange = { day: 360, week: 4320, month: 30240}
+let timeRange = { day: 1440, week: 10080, month: 43200}
 let chart;
 function getDate(range){
     const currentTime = new Date(); // Get the current time
     const timeRangeMinutes = timeRange[range]; // Total time range of the chart in minutes
-    const numDataPoints = weatherData.Enschede.insideTemperature.day.length;
-    const interval = timeRangeMinutes / numDataPoints; // Time interval between points in minutes
+    const interval = timeRangeMinutes / 10; // Time interval between points in minutes
 
     // Generate labels based on the current time and time interval
-    const timeLabels = Array(numDataPoints).fill().map((_, i) => {
+    const timeLabels = Array(10).fill().map((_, i) => {
         const labelTime = new Date(currentTime.getTime() - (timeRangeMinutes - i * interval) * 60 * 1000);
         const date = labelTime.toLocaleDateString('en-GB'); // Format as DD/MM/YYYY (change locale as needed)
         const time = labelTime.toTimeString().slice(0, 5); // Format as HH:mm
